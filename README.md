@@ -1,6 +1,6 @@
-Nom :
-Prénom :
-URL Netlify :
+Nom : Baranowska
+Prénom : Oliwia
+URL Netlify : https://graceful-sunflower-f61e06.netlify.app
 
 État initial : le bouton 🍔 ne fait rien, et la <nav> s'affiche en permanence sous le bouton (en double). On cherche à mettre en place un menu avec `popover`.
 
