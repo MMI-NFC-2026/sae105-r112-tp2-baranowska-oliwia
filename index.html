@@ -11,14 +11,17 @@
 <body>
   <header class="header header--home">
 
-    <!-- Menu principal -->
+    <!--Ce bouton permet d'ouvrir et de fermer le menu grâce à l'attribut popovertarget, sans utiliser JavaScript. -->
     <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
       🍔
     </button>
 
+<!--Le menu est déclaré comme un popover pour être masqué par défaut et s'afficher uniquement lorsqu'on l'ouvre. L'identifiant permet de le cibler depuis les boutons.-->
     <nav class="menu" id="menu" popover aria-label="Main menu"> 
+      <!-- Ce bouton permet de fermer le menu. L'attribut popovertargetaction="hide" indique que le menu doit être masqué lorsqu'on clique dessus. -->
       <button class="menu__close burger burger--close" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Close the menu"> autofocus
         🍔
+      <!-- L'attribut autofocus place automatiquement le focus sur le bouton de fermeture lorsque le menu s'ouvre, pour faciliter la navigation au clavier. -->
       </button>
       <ul class="menu__list">
         <li class="menu__item"><a class="menu__link" href="#">Item de menu un</a></li>
