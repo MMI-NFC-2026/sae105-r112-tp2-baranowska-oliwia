@@ -43,3 +43,22 @@ html:has(.menu:popover-open) {
     transition: none;
   }
 }
+
+/* définition répertoire courant
+
+Répertoire courant : Dossier dans lequel on se trouve actuellement.
+PWD : Commande qui affiche le chemin du répertoire courant.
+LS : Commande qui affiche les fichiers et dossiers présents dans le répertoire courant.
+MKDIR : Commande qui permet de créer un nouveau dossier.
+CD : Commande qui permet de changer de répertoire.
+Historique des commandes : Liste des commandes précédemment utilisées dans le terminal.
+URI : Identifiant permettant de désigner une ressource sur Internet ou sur un ordinateur.
+URL : Adresse qui indique où se trouve une ressource et comment y accéder.
+URL relative : Adresse qui indique l'emplacement d'une ressource par rapport à la page actuelle.
+Protocole file: : Protocole permettant d'accéder à un fichier stocké sur son ordinateur.
+Protocole http: : Protocole permettant l'échange de données entre un navigateur et un serveur web.
+Adresse IP : Numéro permettant d'identifier un appareil sur un réseau.
+Port (logiciel) : Numéro permettant de diriger les données vers une application ou un service précis.
+Nom de domaine : Nom facile à retenir qui permet d'accéder à un site Internet.
+Localhost : Nom qui désigne l'ordinateur sur lequel on travaille.
+Redirection de port : Action qui permet de rediriger une connexion d'un port vers un autre appareil ou service. */
