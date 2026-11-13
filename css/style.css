@@ -44,6 +44,104 @@ html:has(.menu:popover-open) {
   }
 }
 
+/* Le menu prend toute la largeur et toute la hauteur disponibles.
+On supprime également les bordures pour obtenir un affichage plein écran. */
+.menu {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transition: 400ms allow-discrete;
+  opacity: 0;
+}
+
+/* Lorsque le menu est ouvert, on empêche le défilement
+de la page en arrière-plan grâce à overflow: hidden.
+Le sélecteur :has() permet de détecter l'ouverture du menu. */
+html:has(.menu:popover-open) {
+  overflow: hidden;
+}
+
+/* La propriété cursor: pointer change l'apparence du curseur
+en petite main lorsque l'on passe sur le bouton. */
+.burger {
+  cursor: pointer;
+}
+
+/* Lorsque le popover est ouvert, l'opacité passe à 1
+pour rendre le menu visible progressivement. */
+.menu:popover-open {
+  opacity: 1;
+}
+
+/* Définit l'état de départ de l'animation pour permettre
+au menu d'apparaître progressivement même lorsqu'il était masqué. */
+@starting-style {
+  .menu:popover-open {
+    opacity: 0;
+  }
+}
+
+/* Définit la position de départ du bouton de fermeture
+avant l'ouverture du menu. */
+@starting-style {
+  .menu:popover-open .burger--close {
+    transform: none;
+  }
+}
+
+/* Lorsque le menu est ouvert, le bouton de fermeture
+effectue une rotation de 90 degrés avec une transition de 400ms. */
+.menu:popover-open .burger--close {
+  transform: rotate(90deg);
+  transition: 400ms;
+}
+
+/* Désactive les animations si l'utilisateur préfère
+réduire les mouvements sur son appareil. */
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .menu .burger--close {
+    transition: none;
+  }
+}
+
+
+/* ============================== */
+/* NOUVEAUX STYLES POUR LE SITE    */
+/* ============================== */
+
+/* Les images prennent toute la largeur disponible.
+La hauteur s'adapte automatiquement pour éviter de déformer les images. */
+.media--fullwidth {
+  width: 100%;
+  height: auto;
+}
+
+/* Permet de personnaliser les liens de navigation.
+On ajoute également un espace autour de chaque lien. */
+nav a {
+  display: inline-block;
+  margin: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Lorsque l'on passe la souris sur un lien,
+celui-ci est souligné pour montrer qu'il est cliquable. */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Ajoute une icône de livre avant le titre du menu. */
+nav > h4::before {
+  content: url("../../public/icones/book.svg");
+}
+
+/* Ajoute une icône avant les liens du menu. */
+nav > ul > li > a::before {
+  content: url("../../public/icones/bag-plus.svg");
+}
+
 /* définition répertoire courant
 
 Répertoire courant : Dossier dans lequel on se trouve actuellement.
